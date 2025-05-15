@@ -18,5 +18,16 @@ This project is an interactive data visualization application using **D3.js v4**
 
 ## 📁 Project structure
 
+```bash
+.
+├── index.html            # Main page
+├── dataviz.js            # Main D3.js code
+├── style.css             # Stylesheets
+├── data_logt_dep.csv     # Data by department (social housing)
+└── region-names.json     # Mapping of region codes to names
+
+```
+
+
 #### Inspired by Jeffrey Morgano's work
 
