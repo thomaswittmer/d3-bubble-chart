@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-queue.v3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.8.0/proj4.js"></script>
+  <script src="dataviz.js"></script>
+  <title>D3 Departments Bubble Chart</title>
+</head>
+<body>
+
+<div id="controls">
+  <span>
+    <label><input id="regions" type="radio" name="grouping" value="regions">Par région</label>
+    <label><input id="dep-centers" type="radio" name="grouping" value="dep-centers">Par centre EPCI</label>
+    <label><input id="nbrLogement" type="radio" name="grouping" value="nbrLogement">Par nb logements</label>
+  </span>
+  <span>
+    
+    <!-- <label><input id="colors" type="radio" name="fill" value="colors" checked>Couleurs</label> -->
+  </span>
+</div>
+
+<!-- <div id="dep-info"></div> -->
+<div id="bubble-chart"></div>
+<div id="region-legend" class="legend-container"></div>
+
+<script>
+  d3.queue()
+    .defer(d3.csv, "data_logt_dep.csv")
+    .defer(d3.json, "region-names.json")
+    .await(createBubbleChart);
+</script>
+
+</body>
+</html>

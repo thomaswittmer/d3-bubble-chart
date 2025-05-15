@@ -1,0 +1,146 @@
+/* ------------------------------
+   Global layout and typography
+------------------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+#bubble-chart {
+  position: relative;
+  margin: 30px auto;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  max-width: 1200px;
+  padding-bottom: 50%; /* Rapport hauteur/largeur */
+  height: 0;
+  overflow: hidden;
+}
+
+#bubble-chart svg.svg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
+/* ------------------------------
+   Controls styling
+------------------------------ */
+
+#controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+#controls span {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+#controls label {
+  background-color: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-weight: 500;
+}
+
+#controls input[type="radio"] {
+  display: none;
+}
+
+#controls input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+#controls label:hover {
+  background-color: #e3e3e3;
+}
+
+
+/* ------------------------------
+   Info box (hovered bubble)
+------------------------------ */
+
+#dep-info {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+  color: #333;
+  pointer-events: none;
+}
+
+
+
+/* ------------------------------
+   Region legend styling
+------------------------------ */
+
+.legend-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 13px;
+  color: #333;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+}
+
+circle {
+  stroke: white;
+  stroke-width: 0.5;
+}
+
+.svg-info-text {
+  pointer-events: none;
+  user-select: none;
+}
