@@ -1,27 +1,27 @@
-# Visualisation interactive des logements sociaux par département
+# Interactive Visualization of Social Housing by Department
 
-Ce projet est une application interactive de datavisualisation en **D3.js v4**, représentant les **logements sociaux par département français** sous forme de **bulles**. Chaque bulle correspond à un département, dont la taille est proportionnelle au nombre de logements sociaux.
+This project is an interactive data visualization application using **D3.js v4**, representing **social housing by French department** in the form of **bubbles**. Each bubble corresponds to a department, with its size proportional to the number of social housing units.
 
-## 🔍 Fonctionnalités
+## 🔍 Features
 
-- **Visualisation par regroupement :**
-  - **Vue générale** : toutes les bulles rassemblées au centre.
-  - **Par centre géographique (carte)** : les bulles sont positionnées selon la projection géographique du centre de chaque département.
-  - **Par région** : les bulles sont regroupées horizontalement selon leur région.
-  - **Par nombre de logements** : représentation selon un axe Y logarithmique du nombre de logements sociaux.
+- **Visualization by grouping:**
+    - **General view**: all bubbles gathered in the center.
+    - **By geographic center (map)**: bubbles are positioned according to the geographic projection of each department's center.
+    - **By region**: bubbles are grouped horizontally by their region.
+    - **By number of housing units**: representation on a logarithmic Y-axis based on the number of social housing units.
 
-- **Interactions utilisateur :**
-  - **Survol d'une bulle** : affichage du nom du département, code et nombre de logements sociaux.
-  - **Légende dynamique des régions** : s’affiche avec les couleurs correspondantes.
-  - **Transitions fluides** entre les vues.
-  - **Responsive** : la visualisation s’adapte à différentes tailles d’écran.
+- **User interactions:**
+    - **Hover over a bubble**: displays the department name, code, and number of social housing units.
+    - **Dynamic region legend**: displayed with corresponding colors.
+    - **Smooth transitions** between views.
+    - **Responsive**: the visualization adapts to different screen sizes.
 
-## 📁 Structure du projet
+## 📁 Project structure
 
 ```bash
 .
-├── index.html            # Page principale
-├── scriptJ.js            # Code D3.js principal
-├── style.css             # Feuilles de style
-├── data_logt_dep.csv     # Données par département (logements sociaux)
-└── region-names.json     # Mapping des codes régions vers les noms
+├── index.html            # Main page
+├── dataviz.js            # Main D3.js code
+├── style.css             # Stylesheets
+├── data_logt_dep.csv     # Data by department (social housing)
+└── region-names.json     # Mapping of region codes to names
